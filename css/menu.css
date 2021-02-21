@@ -1,0 +1,18 @@
+.main-wrapper {
+    height: 99vh;  
+}
+
+.section{ 
+    margin: 0;
+    height: 99%;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 7em;
+}
+
+
+.menu a {
+    font-weight: 100;
+}
