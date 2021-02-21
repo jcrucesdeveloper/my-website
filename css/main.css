@@ -1,2 +1,8 @@
 
+html {
+    scroll-behavior: smooth;
+  }
 
+.subtitle{
+    font-weight: bold;
+}
