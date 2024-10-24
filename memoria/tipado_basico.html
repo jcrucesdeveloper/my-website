@@ -98,7 +98,7 @@ import numpy as np
 import torch
 
 # Declaracion de tensor en numpy
-# B(base type): tensor[float]
+# B(base type): tensor
 # S(shape): np.array[[s1=2; s2=2]]
 # s(size): 2 × 2 = 4 elementos
 tensor: TensorNp[2, 2] = np.array([[1.0, 2.0], [3.0, 4.0]])
@@ -108,7 +108,7 @@ print(f"Size: {tensor.size}")    # 4 elementos
 
 # Recorrer el tensor con range
 for i: int in range(len(tensor)):  # B(base type): int, S(shape): [s1=2], s(size): 2 elementos
-    # B(base type): tensor[float]
+    # B(base type): tensor
     # S(shape): [s1=2]
     # s(size): 2 elementos
     element = tensor[i]
@@ -120,8 +120,9 @@ for i: int in range(len(tensor)):  # B(base type): int, S(shape): [s1=2], s(size
 # Recorrer el tensor con doble range    
 for i: int in range(len(tensor)):      # B(base type): int, S(shape): [s1=2], s(size): 2 elementos
     for j: int in range(len(tensor[i])):  # B(base type): int, S(shape): [s1=2], s(size): 2 elementos
+        # Typing de element
         # B(base type): float
-        # S(shape): []
+        # S(shape): [s=1]
         # s(size): 1 elemento
         element = tensor[i][j]
         print(f"Base type: float")
