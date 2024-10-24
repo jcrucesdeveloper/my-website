@@ -116,7 +116,16 @@ for i: int in range(len(tensor)):  # B(base type): int, S(shape): [s1=2], s(size
     print(f"Shape del elemento: {element.shape}")  # [2]
     print(f"Size del elemento: {len(element)}")    # 2
     print(f"Valor: {element}")
-    
+
+# Recorrer el tensor con doble range    
+for i: int in range(len(tensor)):      # B(base type): int, S(shape): [s1=2], s(size): 2 elementos
+    for j: int in range(len(tensor[i])):  # B(base type): int, S(shape): [s1=2], s(size): 2 elementos
+        # B(base type): float
+        # S(shape): []
+        # s(size): 1 elemento
+        element = tensor[i][j]
+        print(f"Base type: float")
+        print(f"Valor del elemento [{i},{j}]: {element}")  # Elemento escalar
         </code></pre>
 
 </div>
