@@ -27,6 +27,7 @@ TensorType -> Tensor T
 ShapeType -> T i
 ShapeType -> T i, j, k, ... n 
 ShapeType -> T.shape  
+Iterable -> in Tensor T
 Iterable -> ShapeType n
 Iterable -> range(ShapeType n)
 i, j, k, ... n -> Int
@@ -66,7 +67,7 @@ i, j, k -> Int
 
     <h3 style="color: #444;">Representaciones en Python (NumPy)</h3>
 
-    <h4 style="color: black;">1) Ejemplo con Tamaño Fijo</h4>
+    <h4 style="color: black;">1) Ejemplo con Tamaño Fijo de una dimensión</h4>
     <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
 from tyger import TensorNp
 tensor: TensorNp[3] = np.array([1, 2, 3])
@@ -74,63 +75,112 @@ tensor: TensorNp[3] = np.array([1, 2, 3])
 
     <p>La equivalencia de tipos es:</p>
     <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
-Tensor T
-TensorType (ShapeType 3)
+Tensor tensor 3 -> TensorType (ShapeType 3)
     </code></pre>
 
-    <h4 style="color: black;">2) Ejemplo con Tamaño Variable</h4>
+
+    <h4 style="color: black;">2) Ejemplo con Tamaño Fijo de varias dimensiones</h4>
     <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
 from tyger import TensorNp
-n = 3 * 1 
-tensor: TensorNp[n] = np.array([1, 2, 3])
+tensor: TensorNp[3,2] = np.array([[1, 2], [3, 4], [5, 6]])
+    </code></pre>
+
+    <p>La equivalencia de tipos es:</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
+Tensor tensor 3,2 -> TensorType (ShapeType 3,2)
+    </code></pre>
+
+    <h4 style="color: black;">3) Ejemplo con Tamaño Variable</h4>
+    <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
+from tyger import TensorNp
+n = ...
+tensor: TensorNp[n] = ..
     </code></pre>
 
 
     <p>La equivalencia de tipos es:</p>
     <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
-Tensor T
+Tensor tensor n
 TensorType (ShapeType n)
 n -> Int
     </code></pre>
 
-    <h4 style="color: black;">3) Ejemplo con un bucle y tensor de una dimensión</h4>
+    <h4 style="color: black;">4) Ejemplo con un bucle y tensor de una dimensión</h4>
     <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
 from tyger import TensorNp
 import numpy as np
 
-tensor: TensorNp = np.array([1, 2, 3, 4, 5])
-for element in tensor:
+T: TensorNp[5] = np.array([1, 2, 3, 4, 5])
+for element in T:
     print(element)
     </code></pre>
 
     <p>ShapeType es un iterable en python</p>
     <p>La equivalencia de tipos es:</p>
     <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
-Tensor T 5
-TensorType (ShapeType 5)
-for element in ShapeType 5:
+Tensor tensor 5 -> TensorType (ShapeType 5)
+in tensor -> Iterable
+for element in Iterable:
 element -> Int
     </code></pre>
 
-   <h4 style="color: black;">4) Ejemplo con un bucle range y len en tensor de una dimensión</h4>
+   <h4 style="color: black;">5) Ejemplo con un bucle range y len en tensor de una dimensión</h4>
     <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
 from tyger import TensorNp
 import numpy as np
 
-tensor: TensorNp = np.array([1, 2, 3, 4, 5])
-for i in range(len(tensor)): # Esto deberia entregar un iterable el range de len(tensor)
-    print(f"Elemento {i}: {tensor[i]}")
+T: TensorNp[5] = np.array([1, 2, 3, 4, 5])
+for i in range(len(T)): # Esto deberia entregar un iterable el range de len(tensor)
+    print(f"Elemento {i}: {T[i]}")
     </code></pre>
 
-    <p>ShapeType es un iterable en python</p>
     <p>La equivalencia de tipos es:</p>
     <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
-Tensor T 5 -> TensorType (ShapeType 5)
-len(T) -> ShapeType 5
-range(len(T)) -> Iterable 
-for i in ShapeType 5:
+Tensor tensor 5 -> TensorType (ShapeType 5)
+len(tensor) -> ShapeType 5
+range(len(tensor)) -> Iterable 
+for i in Iterable:
 i -> Int
     </code></pre>
+
+   <h4 style="color: black;">6) Ejemplo con una función identidad</h4>
+<pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
+from tyger import TensorNp
+import numpy as np
+
+def identity(tensor: TensorNp[n]) -> TensorNp[n]:
+    return tensor
+    
+T: TensorNp[5] = np.array([1, 2, 3, 4, 5])
+identity(T)</code></pre>
+
+    <p>La equivalencia de tipos es:</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
+Identity: TensorNp[n] -> TensorNp[n]
+Tensor tensor 5 -> TensorType (ShapeType 5)
+Identity(tensor) -> TensorNp[5]
+    </code></pre>
+
+   <h4 style="color: black;">7) Ejemplo con una función multiplicación</h4>
+<pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
+from tyger import TensorNp
+import numpy as np
+
+def mul(tensor1: TensorNp[n,m], tensor2: TensorNp[m,k]) -> TensorNp[n,k]:
+    return tensor1 * tensor2
+    
+T1: TensorNp[1,2] = np.array([[1, 2]])
+T2: TensorNp[2,1] = np.array([[2], [1]])
+mul(T1, T2)</code></pre>
+
+    <p>La equivalencia de tipos es:</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
+Mul: TensorNp[n,m] -> TensorNp[m,k] -> TensorNp[n,k]
+Tensor tensor1 1,2 -> TensorType (ShapeType 1,2)
+Tensor tensor2 2,1 -> TensorType (ShapeType 2,1)
+Mul(tensor1, tensor2) -> TensorNp[1,1] -> TensorType (ShapeType 1,1)
+    </code></pre>
+
 
 
 
