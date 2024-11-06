@@ -24,14 +24,16 @@
 
     <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
 TensorType -> Tensor T 
-DimensionType -> T i
-DimensionType -> T i, j, k, ... n
-DimensionType -> T.shape  
+ShapeType -> T i
+ShapeType -> T i, j, k, ... n 
+ShapeType -> T.shape  
+Iterable -> ShapeType n
+Iterable -> range(ShapeType n)
 i, j, k, ... n -> Int
-Tuple of Ints -> len(T.shape)
 Int -> len(T.shape[n])
 Int -> size(T)
 Int -> T.flat
+Tuple of Ints -> len(T.shape)
     </code></pre>
 
     <h4 style="color: #555;">Ejemplo 1: Tensor Unidimensional</h4>
@@ -64,7 +66,7 @@ i, j, k -> Int
 
     <h3 style="color: #444;">Representaciones en Python (NumPy)</h3>
 
-    <h4 style="color: #555;">Ejemplo con Tamaño Fijo</h4>
+    <h4 style="color: black;">1) Ejemplo con Tamaño Fijo</h4>
     <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
 from tyger import TensorNp
 tensor: TensorNp[3] = np.array([1, 2, 3])
@@ -76,11 +78,64 @@ Tensor T
 TensorType (ShapeType 3)
     </code></pre>
 
-    <h4 style="color: #555;">Ejemplo con Tamaño Variable</h4>
+    <h4 style="color: black;">2) Ejemplo con Tamaño Variable</h4>
     <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
 from tyger import TensorNp
+n = 3 * 1 
 tensor: TensorNp[n] = np.array([1, 2, 3])
     </code></pre>
+
+
+    <p>La equivalencia de tipos es:</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
+Tensor T
+TensorType (ShapeType n)
+n -> Int
+    </code></pre>
+
+    <h4 style="color: black;">3) Ejemplo con un bucle y tensor de una dimensión</h4>
+    <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
+from tyger import TensorNp
+import numpy as np
+
+tensor: TensorNp = np.array([1, 2, 3, 4, 5])
+for element in tensor:
+    print(element)
+    </code></pre>
+
+    <p>ShapeType es un iterable en python</p>
+    <p>La equivalencia de tipos es:</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
+Tensor T 5
+TensorType (ShapeType 5)
+for element in ShapeType 5:
+element -> Int
+    </code></pre>
+
+   <h4 style="color: black;">4) Ejemplo con un bucle range y len en tensor de una dimensión</h4>
+    <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
+from tyger import TensorNp
+import numpy as np
+
+tensor: TensorNp = np.array([1, 2, 3, 4, 5])
+for i in range(len(tensor)): # Esto deberia entregar un iterable el range de len(tensor)
+    print(f"Elemento {i}: {tensor[i]}")
+    </code></pre>
+
+    <p>ShapeType es un iterable en python</p>
+    <p>La equivalencia de tipos es:</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
+Tensor T 5 -> TensorType (ShapeType 5)
+len(T) -> ShapeType 5
+range(len(T)) -> Iterable 
+for i in ShapeType 5:
+i -> Int
+    </code></pre>
+
+
+
+
+
 
     
 </div>
