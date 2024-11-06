@@ -1,0 +1,80 @@
+
+El trabajo de detección estatica de la forma de los tensores puedes ser clasificado en categorias:
+
+- Uno analiza todo el progrma y collecta la forma d elos tensores evaluandolos parcialmente
+- La segunda forma consiste en expresar las formas de los tensores como parte de información de tipo.
+
+
+¿Qué significa type-based approach?
+
+Se trata de expresar las formas de los tensores como parte de información de tipo.
+
+
+Propusta de especificación del lenguaje
+
+TensorType -> Tensor T 
+DimensionType -> T i
+DimensionType -> T i, j, k, ... n
+DimensionType -> T.shape  
+i, j, k, ... n -> Int
+Tuple of Ints -> len(T.shape)
+Int -> len(T.shape[n])
+Int -> size(T)
+
+Ejemplo 1
+Un tensor llamado T con dimension i
+Tensor T i
+
+Equivalencia de tipos
+TensorType (ShapeType i) 
+i -> Int
+
+Ejemplo 2
+Tensor U i, j, k
+
+Equivalencia de tipos
+TensorType (ShapeType i, j, k) 
+i, j, k -> Int
+
+Ejemplo 3 operaciones
+
+Mul: Tensor U i, j -> Tensor V j, k -> Tensor W i, k
+
+Equivalencia de tipos
+TensorType (ShapeType i, j) -> TensorType (ShapeType j, k) -> TensorType (ShapeType i, k)
+i, j, k -> Int
+
+Ahora representaciones en python, especificamente con NumPy 
+
+Ejemplo con tamaño fijo
+
+from tyger import TensorNp
+tensor: TensorNp[3] = np.array([1, 2, 3])
+
+
+La equivalencia de tipos es
+Tensor T
+TensorType (ShapeType 3)
+
+
+
+
+Declaración Python 
+
+tensor a: Tensor[n] = ...
+
+Equivalencia de tipos
+TensorType T n -> DimensionType T 
+
+
+
+
+
+
+
+Especificaciónn de lenguaje
+
+Definicion de lenguaje
+
+Ejemplos de lenguaje
+
