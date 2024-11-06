@@ -1,17 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección Estática de Formas en Tensores</title>
+</head>
+<body>
+<div class="content" style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+    <h2 style="color: #333; text-align: center;">Detección Estática de Formas en Tensores</h2>
 
-El trabajo de detección estatica de la forma de los tensores puedes ser clasificado en categorias:
+    <p>El trabajo de detección estática de la forma de los tensores puede ser clasificado en dos categorías:</p>
 
-- Uno analiza todo el progrma y collecta la forma d elos tensores evaluandolos parcialmente
-- La segunda forma consiste en expresar las formas de los tensores como parte de información de tipo.
+    <ul>
+        <li>Análisis completo del programa y recolección de formas de tensores mediante evaluación parcial</li>
+        <li>Expresión de las formas de los tensores como parte de la información de tipo (type-based approach)</li>
+    </ul>
 
+    <h3 style="color: #444;">Type-based Approach</h3>
+    
+    <p>Este enfoque consiste en expresar las formas de los tensores como parte de la información de tipo.</p>
 
-¿Qué significa type-based approach?
+    <h3 style="color: #444;">Propuesta de Especificación del Lenguaje</h3>
 
-Se trata de expresar las formas de los tensores como parte de información de tipo.
-
-
-Propusta de especificación del lenguaje
-
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
 TensorType -> Tensor T 
 DimensionType -> T i
 DimensionType -> T i, j, k, ... n
@@ -20,61 +31,62 @@ i, j, k, ... n -> Int
 Tuple of Ints -> len(T.shape)
 Int -> len(T.shape[n])
 Int -> size(T)
+Int -> T.flat
+    </code></pre>
 
-Ejemplo 1
-Un tensor llamado T con dimension i
+    <h4 style="color: #555;">Ejemplo 1: Tensor Unidimensional</h4>
+    <p>Un tensor llamado T con dimensión i</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
 Tensor T i
 
-Equivalencia de tipos
+Equivalencia de tipos:
 TensorType (ShapeType i) 
 i -> Int
+    </code></pre>
 
-Ejemplo 2
+    <h4 style="color: #555;">Ejemplo 2: Tensor Multidimensional</h4>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
 Tensor U i, j, k
 
-Equivalencia de tipos
+Equivalencia de tipos:
 TensorType (ShapeType i, j, k) 
 i, j, k -> Int
+    </code></pre>
 
-Ejemplo 3 operaciones
-
+    <h4 style="color: #555;">Ejemplo 3: Operaciones con Tensores</h4>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
 Mul: Tensor U i, j -> Tensor V j, k -> Tensor W i, k
 
-Equivalencia de tipos
+Equivalencia de tipos:
 TensorType (ShapeType i, j) -> TensorType (ShapeType j, k) -> TensorType (ShapeType i, k)
 i, j, k -> Int
+    </code></pre>
 
-Ahora representaciones en python, especificamente con NumPy 
+    <h3 style="color: #444;">Representaciones en Python (NumPy)</h3>
 
-Ejemplo con tamaño fijo
-
+    <h4 style="color: #555;">Ejemplo con Tamaño Fijo</h4>
+    <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
 from tyger import TensorNp
 tensor: TensorNp[3] = np.array([1, 2, 3])
+    </code></pre>
 
-
-La equivalencia de tipos es
+    <p>La equivalencia de tipos es:</p>
+    <pre><code class="language-text" style="padding: 15px; border-radius: 5px;">
 Tensor T
 TensorType (ShapeType 3)
+    </code></pre>
 
+    <h4 style="color: #555;">Ejemplo con Tamaño Variable</h4>
+    <pre><code class="language-python" style="padding: 15px; border-radius: 5px;">
+from tyger import TensorNp
+tensor: TensorNp[n] = np.array([1, 2, 3])
+    </code></pre>
 
-
-
-Declaración Python 
-
-tensor a: Tensor[n] = ...
-
-Equivalencia de tipos
-TensorType T n -> DimensionType T 
-
-
-
-
-
-
-
-Especificaciónn de lenguaje
-
-Definicion de lenguaje
-
-Ejemplos de lenguaje
-
+    
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css">
+    
+</body>
+ 
