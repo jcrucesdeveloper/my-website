@@ -80,7 +80,31 @@
         .implementation {
             color: #666;
             font-size: 0.9em;
-            margin-left: 20px;
+            margin-left: 10px;
+        }
+        .doc-link {
+            color: #0366d6;
+            text-decoration: underline;
+            transition: all 0.2s;
+            padding: 2px 4px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .doc-link:hover {
+            background-color: #f1f8ff;
+            color: #0550ae;
+        }
+        .doc-link::after {
+            content: "↗";
+            font-size: 0.8em;
+            margin-left: 3px;
+            vertical-align: super;
+        }
+        .pytorch {
+            color: #EE4C2C;
+        }
+        .numpy {
+            color: #013243;
         }
     </style>
 </head>
@@ -94,9 +118,9 @@
         <div class="summary-section">
             <h3>Matrix Operations</h3>
             <ul>
-                <li>matmul: 33 <span class="implementation">(PyTorch: 30, Operator: 3)</span></li>
-                <li>bmm: 1 <span class="implementation">(PyTorch: 1)</span></li>
-                <li>dot: 3 <span class="implementation">(PyTorch: 3)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.matmul.html" class="doc-link" target="_blank">matmul</a>: 33 <span class="implementation">(PyTorch: 30, Operator: 3)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.bmm.html" class="doc-link" target="_blank">bmm</a>: 1 <span class="implementation">(PyTorch: 1)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.dot.html" class="doc-link" target="_blank">dot</a>: 3 <span class="implementation">(PyTorch: 3)</span></li>
                 <li class="total">Total Matrix Operations: 37</li>
             </ul>
         </div>
@@ -106,8 +130,8 @@
             <ul>
                 <li>mul: 49 <span class="implementation">(Operator: 49)</span></li>
                 <li>add: 123 <span class="implementation">(Operator: 123)</span></li>
-                <li>sub: 33 <span class="implementation">(PyTorch: 4, Operator: 29)</span></li>
-                <li>divide: 4 <span class="implementation">(NumPy: 4)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.sub.html" class="doc-link" target="_blank">sub</a>: 33 <span class="implementation">(PyTorch: 4, Operator: 29)</span></li>
+                <li><a href="https://numpy.org/doc/stable/reference/generated/numpy.divide.html" class="doc-link" target="_blank">divide</a>: 4 <span class="implementation">(NumPy: 4)</span></li>
                 <li>div: 48 <span class="implementation">(Operator: 48)</span></li>
                 <li class="total">Total Element-wise Operations: 257</li>
             </ul>
@@ -116,11 +140,11 @@
         <div class="summary-section">
             <h3>Shape Operations</h3>
             <ul>
-                <li>permute: 1 <span class="implementation">(PyTorch: 1)</span></li>
-                <li>reshape: 4 <span class="implementation">(PyTorch: 4)</span></li>
-                <li>view: 18 <span class="implementation">(PyTorch: 18)</span></li>
-                <li>squeeze: 4 <span class="implementation">(PyTorch: 4)</span></li>
-                <li>unsqueeze: 2 <span class="implementation">(PyTorch: 2)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor.permute" class="doc-link" target="_blank">permute</a>: 1 <span class="implementation">(PyTorch: 1)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.reshape.html" class="doc-link" target="_blank">reshape</a>: 4 <span class="implementation">(PyTorch: 4)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/tensors.html#torch.Tensor.view" class="doc-link" target="_blank">view</a>: 18 <span class="implementation">(PyTorch: 18)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.squeeze.html" class="doc-link" target="_blank">squeeze</a>: 4 <span class="implementation">(PyTorch: 4)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.unsqueeze.html" class="doc-link" target="_blank">unsqueeze</a>: 2 <span class="implementation">(PyTorch: 2)</span></li>
                 <li class="total">Total Shape Operations: 29</li>
             </ul>
         </div>
@@ -128,9 +152,9 @@
         <div class="summary-section">
             <h3>Combining Operations</h3>
             <ul>
-                <li>cat: 11 <span class="implementation">(PyTorch: 11)</span></li>
-                <li>stack: 11 <span class="implementation">(PyTorch: 11)</span></li>
-                <li>concat: 5 <span class="implementation">(PyTorch: 5)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.cat.html" class="doc-link" target="_blank">cat</a>: 11 <span class="implementation">(PyTorch: 11)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.stack.html" class="doc-link" target="_blank">stack</a>: 11 <span class="implementation">(PyTorch: 11)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.concat.html" class="doc-link" target="_blank">concat</a>: 5 <span class="implementation">(PyTorch: 5)</span></li>
                 <li class="total">Total Combining Operations: 27</li>
             </ul>
         </div>
@@ -138,9 +162,9 @@
         <div class="summary-section">
             <h3>Reduction Operations</h3>
             <ul>
-                <li>mean: 15 <span class="implementation">(PyTorch: 15)</span></li>
-                <li>sum: 24 <span class="implementation">(PyTorch: 24)</span></li>
-                <li>max: 30 <span class="implementation">(PyTorch: 30)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.mean.html" class="doc-link" target="_blank">mean</a>: 15 <span class="implementation">(PyTorch: 15)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.sum.html" class="doc-link" target="_blank">sum</a>: 24 <span class="implementation">(PyTorch: 24)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.max.html" class="doc-link" target="_blank">max</a>: 30 <span class="implementation">(PyTorch: 30)</span></li>
                 <li class="total">Total Reduction Operations: 69</li>
             </ul>
         </div>
@@ -148,10 +172,10 @@
         <div class="summary-section">
             <h3>Neural Network Layers</h3>
             <ul>
-                <li>Conv1d: 14 <span class="implementation">(NN: 14)</span></li>
-                <li>Linear: 23 <span class="implementation">(NN: 23)</span></li>
-                <li>LSTM: 1 <span class="implementation">(NN: 1)</span></li>
-                <li>GRU: 2 <span class="implementation">(NN: 2)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Conv1d.html" class="doc-link" target="_blank">Conv1d</a>: 14 <span class="implementation">(NN: 14)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html" class="doc-link" target="_blank">Linear</a>: 23 <span class="implementation">(NN: 23)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html" class="doc-link" target="_blank">LSTM</a>: 1 <span class="implementation">(NN: 1)</span></li>
+                <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.GRU.html" class="doc-link" target="_blank">GRU</a>: 2 <span class="implementation">(NN: 2)</span></li>
                 <li class="total">Total Neural Network Layers: 40</li>
             </ul>
         </div>
