@@ -12,7 +12,8 @@ h1 {
 }
 
 h2 {
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid #d1d9e0b3;
+  font-weight: 400;
 }
 .job-info {
   display: flex;
