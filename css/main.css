@@ -14,7 +14,13 @@ h1 {
 h2 {
   border-bottom: 2px solid #d1d9e0b3;
   font-weight: 400;
+  margin-bottom: 0.3em;
 }
+
+.job {
+  margin-top: 0;
+}
+
 .job-info {
   display: flex;
 }
@@ -53,7 +59,8 @@ section {
   margin-bottom: 0;
 }
 h3 i {
-  font-size: 0.8em;
+  font-size: 0.7em;
+  text-align: center;
 }
 
 .job-location,
