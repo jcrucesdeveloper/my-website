@@ -1,12 +1,23 @@
-
 html {
-    scroll-behavior: smooth;
-  }
-
-.subtitle{
-    font-weight: bold;
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+body {
+  margin: 0;
+}
+h1 {
+  text-align: center;
 }
 
-.programming-languages i{
-    font-size: 7em;
+section {
+  margin: 0.5em;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.programming-languages i {
+  font-size: 7em;
 }
