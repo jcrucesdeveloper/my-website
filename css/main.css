@@ -50,7 +50,7 @@ h2 {
   min-height: 80px;
   width: 3em;
   aspect-ratio: 1/1;
-  margin: 20px 10px;
+  margin: 25px 10px;
 }
 
 .job-title {
@@ -368,4 +368,40 @@ footer {
   .footer-links {
     justify-content: center;
   }
+}
+
+/* Expand buttons for job details */
+.expand-btn {
+  appearance: none;
+  border: 1px solid #d0d7de;
+  background: #f6f8fa;
+  color: #24292f;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  transition: all 120ms ease;
+}
+
+.expand-btn:hover {
+  background: #eaeef2;
+  border-color: #afb8c1;
+}
+
+.expand-btn i {
+  font-size: 0.7rem;
+  transition: transform 150ms ease;
+}
+
+.expand-btn.expanded i {
+  transform: rotate(180deg);
+}
+
+.job-bullet-points {
+  transition: all 200ms ease;
 }
