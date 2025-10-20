@@ -250,3 +250,20 @@ li {
   width: 1.2rem;
   text-align: center;
 }
+
+#academic img {
+  max-width: 90%;
+  margin: 0px auto;
+}
+#academic h3 {
+  margin: 0;
+}
+#academic p {
+  margin: 0;
+}
+
+.academic-img {
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+}
