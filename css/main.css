@@ -138,3 +138,69 @@ li {
 .project-description p{
   margin: 10px 0px;
 }
+
+/* Project buttons */
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.project-buttons button {
+  appearance: none;
+  border: 1px solid #d0d7de;
+  background: #f6f8fa;
+  color: #24292f;
+  padding: 0.45em 0.75em;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04), 0 1px 2px rgba(27, 31, 36, 0.1);
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, transform 60ms ease, box-shadow 120ms ease;
+  cursor: pointer;
+}
+
+.project-buttons button i {
+  font-size: 0.9em;
+}
+
+.project-buttons button:hover {
+  background: #0969da;
+  border-color: #0969da;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(9, 105, 218, 0.25);
+}
+
+.project-buttons button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(27, 31, 36, 0.2);
+}
+
+.project-buttons button:focus-visible {
+  outline: 3px solid rgba(9, 105, 218, 0.35);
+  outline-offset: 2px;
+}
+
+/* Variant for "Coming Soon" style buttons (subtle) */
+.project-buttons button:is(:disabled, .is-soon) {
+  background: #f0f2f4;
+  color: #57606a;
+  border-color: #d0d7de;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  .project-buttons {
+    gap: 6px;
+  }
+  .project-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+}
