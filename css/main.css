@@ -165,7 +165,7 @@ li {
 }
 
 .project-buttons button i {
-  font-size: 0.9em;
+  font-size: 1.1rem;
 }
 
 .project-buttons button:hover {
@@ -193,14 +193,4 @@ li {
   border-color: #d0d7de;
   cursor: not-allowed;
   box-shadow: none;
-}
-
-@media (max-width: 640px) {
-  .project-buttons {
-    gap: 6px;
-  }
-  .project-buttons button {
-    width: 100%;
-    justify-content: center;
-  }
 }
