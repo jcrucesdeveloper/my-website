@@ -32,6 +32,10 @@ h2 {
   margin-bottom: 0.3em;
 }
 
+#presentation p {
+  text-align: justify;
+}
+
 .job {
   margin-top: 0;
 }
@@ -99,4 +103,27 @@ ul {
 
 li {
   margin: 0.3em 0;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+}
+
+.project img {
+  max-width: 200px;
+}
+
+.project-description {
+  text-align: justify;
+  font-size: 0.8rem;
+}
+
+.project-description h3 {
+  font-size: 1.2rem;
+  margin: 10px 0px;
+}
+
+.project-description p{
+  margin: 10px 0px;
 }
