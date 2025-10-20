@@ -108,10 +108,20 @@ li {
 .project {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
+
 .project img {
-  max-width: 200px;
+  max-width: 100px;
+  margin-left: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.project-title {
+  display: flex;
+  align-items: baseline;
 }
 
 .project-description {
@@ -122,6 +132,7 @@ li {
 .project-description h3 {
   font-size: 1.2rem;
   margin: 10px 0px;
+  text-align: left;
 }
 
 .project-description p{
