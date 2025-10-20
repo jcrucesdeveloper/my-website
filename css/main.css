@@ -267,3 +267,47 @@ li {
   display: flex;
   justify-content: center;
 }
+  
+/* Additional Information - card grid */
+#aditional-info {
+  margin: 2rem 0;
+}
+
+#aditional-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#aditional-info li {
+  position: relative;
+  padding: 0.8rem 1rem 0.8rem 1.1rem;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  color: #24292f;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 2px rgba(27, 31, 36, 0.06);
+  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease, transform 80ms ease;
+  overflow: hidden;
+}
+
+#aditional-info li::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, #8c959f 0%, #d0d7de 100%);
+}
+
+#aditional-info li:hover {
+  background: #ffffff;
+  border-color: #afb8c1;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(27, 31, 36, 0.12);
+}
+
+#aditional-info li + li {
+  margin-top: 0;
+}
