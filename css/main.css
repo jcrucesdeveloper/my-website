@@ -306,7 +306,7 @@ li {
   margin-top: 8px;
 }
 
-.project-buttons button {
+.project-buttons a {
   appearance: none;
   border: 1px solid #d0d7de;
   background: #f6f8fa;
@@ -321,13 +321,14 @@ li {
   box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04), 0 1px 2px rgba(27, 31, 36, 0.1);
   transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, transform 60ms ease, box-shadow 120ms ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.project-buttons button i {
+.project-buttons a i {
   font-size: 1.1rem;
 }
 
-.project-buttons button:hover {
+.project-buttons a:hover {
   background: #0969da;
   border-color: #0969da;
   color: #fff;
@@ -335,18 +336,18 @@ li {
   box-shadow: 0 4px 10px rgba(9, 105, 218, 0.25);
 }
 
-.project-buttons button:active {
+.project-buttons a:active {
   transform: translateY(0);
   box-shadow: 0 1px 2px rgba(27, 31, 36, 0.2);
 }
 
-.project-buttons button:focus-visible {
+.project-buttons a:focus-visible {
   outline: 3px solid rgba(9, 105, 218, 0.35);
   outline-offset: 2px;
 }
 
 /* Variant for "Coming Soon" style buttons (subtle) */
-.project-buttons button:is(:disabled, .is-soon) {
+.project-buttons a.is-soon {
   background: #f0f2f4;
   color: #57606a;
   border-color: #d0d7de;
@@ -563,4 +564,8 @@ footer {
 
 .job-bullet-points {
   transition: all 200ms ease;
+}
+
+a[href^="#"] {
+  scroll-behavior: smooth;
 }
