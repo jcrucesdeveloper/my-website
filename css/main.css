@@ -72,7 +72,7 @@ header h1 {
   .hamburger {
     display: flex;
   }
-  
+
   .nav-menu {
     position: fixed;
     top: 0;
@@ -87,11 +87,11 @@ header h1 {
     z-index: 1000;
     border-left: 1px solid #000;
   }
-  
+
   .nav-menu.active {
     right: 0;
   }
-  
+
   .close-menu {
     position: absolute;
     top: 1rem;
@@ -103,28 +103,28 @@ header h1 {
     color: #000;
     z-index: 1002;
   }
-  
+
   .close-menu:hover {
     color: #666;
   }
-  
+
   .nav-menu li {
     margin: 1rem 0;
   }
-  
+
   .nav-menu li a {
     font-size: 1.2rem;
   }
-  
+
   /* Hamburger animation */
   .hamburger.active .hamburger-line:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
   }
-  
+
   .hamburger.active .hamburger-line:nth-child(2) {
     opacity: 0;
   }
-  
+
   .hamburger.active .hamburger-line:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
   }
@@ -151,6 +151,22 @@ h2 {
 
 #presentation p {
   text-align: justify;
+}
+
+#presentation i {
+  color: #0969da;
+  margin: 0 0.3rem;
+  font-size: 0.9em;
+}
+
+#presentation strong {
+  color: #24292f;
+  font-weight: 600;
+}
+
+#presentation em {
+  color: #656d76;
+  font-style: italic;
 }
 
 /* Experience Summary */
@@ -193,7 +209,6 @@ h2 {
   color: #656d76;
   font-weight: 500;
 }
-
 
 .job {
   margin-top: 0;
@@ -271,7 +286,6 @@ li {
   flex-direction: row-reverse;
 }
 
-
 .project img {
   max-width: 100px;
   margin-left: 10px;
@@ -294,7 +308,7 @@ li {
   text-align: left;
 }
 
-.project-description p{
+.project-description p {
   margin: 10px 0px;
 }
 
@@ -319,7 +333,8 @@ li {
   align-items: center;
   gap: 6px;
   box-shadow: 0 1px 0 rgba(27, 31, 36, 0.04), 0 1px 2px rgba(27, 31, 36, 0.1);
-  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, transform 60ms ease, box-shadow 120ms ease;
+  transition: background-color 120ms ease, border-color 120ms ease,
+    color 120ms ease, transform 60ms ease, box-shadow 120ms ease;
   cursor: pointer;
   text-decoration: none;
 }
@@ -427,7 +442,7 @@ li {
   display: flex;
   justify-content: center;
 }
-  
+
 /* Additional Information - card grid */
 #aditional-info {
   margin: 2rem 0;
@@ -449,7 +464,8 @@ li {
   color: #24292f;
   font-size: 0.9rem;
   box-shadow: 0 1px 2px rgba(27, 31, 36, 0.06);
-  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease, transform 80ms ease;
+  transition: background-color 140ms ease, border-color 140ms ease,
+    box-shadow 140ms ease, transform 80ms ease;
   overflow: hidden;
 }
 
@@ -524,7 +540,7 @@ footer {
     text-align: center;
     gap: 1rem;
   }
-  
+
   .footer-links {
     justify-content: center;
   }
