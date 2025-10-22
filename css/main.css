@@ -14,8 +14,9 @@ header {
   position: relative;
 }
 header h1 {
-  border: 1px solid #cac3c3;
-  border-radius: 10px;
+  border: 2px solid #cac3c3;
+  border-radius: 8px;
+  padding: 0.8em 1.2em;
 }
 
 .header-content {
@@ -27,6 +28,95 @@ header h1 {
 
 .main-nav {
   position: relative;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 41%;
+  }
+
+  header {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40%;
+    flex: 3;
+    position: fixed;
+    background: linear-gradient(180deg, #f6f8fa 0%, #ffffff 100%);
+    border-right: 2px solid #d0d7de;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.08);
+  }
+  h1 {
+    font-size: 7rem;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 0;
+  }
+
+  #nav-menu {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  #content {
+    flex: 3;
+  }
+  .main-nav {
+    width: 100%;
+    margin: 0;
+  }
+  #nav-menu {
+    font-size: 1.2rem;
+    font-weight: 500;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #nav-menu li {
+    margin: 0;
+    border-bottom: 1px solid #eaeef2;
+  }
+  #nav-menu li a {
+    display: block;
+    padding: 1.5rem 2rem;
+    color: #24292f;
+    text-decoration: none;
+    transition: all 200ms ease;
+    position: relative;
+  }
+  #nav-menu li a:hover {
+    background: #0969da;
+    color: #fff;
+    padding-left: 2.5rem;
+  }
+  #nav-menu li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #0969da;
+    transform: scaleY(0);
+    transition: transform 200ms ease;
+  }
+  #nav-menu li a:hover::before {
+    transform: scaleY(1);
+  }
+  #close-menu {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -68,7 +158,7 @@ header h1 {
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hamburger {
     display: flex;
   }
