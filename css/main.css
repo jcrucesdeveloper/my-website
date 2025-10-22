@@ -76,6 +76,16 @@ header h1 {
     width: 100%;
     margin: 0;
   }
+  .job h3 {
+    font-size: 1.2rem;
+  }
+
+  .job p {
+    font-size: 1rem;
+  }
+  .job li {
+    font-size: 1rem;
+  }
   #nav-menu {
     font-size: 1.2rem;
     font-weight: 500;
