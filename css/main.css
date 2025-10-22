@@ -284,6 +284,7 @@ li {
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
+  margin-top: 10px;
 }
 
 .project img {
@@ -298,8 +299,9 @@ li {
 }
 
 .project-description {
-  text-align: justify;
-  font-size: 0.8rem;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .project-description h3 {
