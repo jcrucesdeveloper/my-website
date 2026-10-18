@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page not found — Jorge Cruces</title>
+    <meta name="robots" content="noindex">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/css/main.css">
+    <script>
+      try {
+        var theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
+    <style>
+      .not-found {
+        display: grid;
+        place-content: center;
+        gap: 1rem;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .not-found .brand__mark {
+        margin: 0 auto 0.5rem;
+      }
+      .not-found p {
+        color: var(--text-muted);
+      }
+      .not-found .btn {
+        justify-self: center;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="not-found">
+      <span class="brand__mark" aria-hidden="true">JC</span>
+      <p class="section__index">404</p>
+      <h1 class="section__title">This page doesn't exist.</h1>
+      <p>Maybe it moved, or the link has a typo.</p>
+      <a class="btn btn--primary" href="/">Back to the homepage</a>
+    </main>
+  </body>
+</html>

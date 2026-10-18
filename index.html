@@ -1,599 +1,666 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <head>
-        <meta charset="utf-8">
-        <meta lang="en">
-        <meta name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jorge Cruces — Software Engineer · Vue.js, .NET &amp; TypeScript</title>
+    <meta name="description" content="Jorge Cruces is a full-stack software engineer in Santiago, Chile, building international money transfer products at Ria with Vue.js and .NET. Portfolio of web apps, mobile games and open-source tools.">
+    <meta name="author" content="Jorge Cruces">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://jcrucesdeveloper.com/">
 
-        <title>Jorge Cruces</title>
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light dark">
 
-        <!-- General info -->
-        <meta name="description"
-            content="Portfolio and projects of Jorge Cruces, web developer.">
-        <meta name="keywords"
-            content="Jorge Cruces, web developer, portfolio, projects">
-        <meta name="author" content="Jorge Cruces">
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Jorge Cruces">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://jcrucesdeveloper.com/">
+    <meta property="og:title" content="Jorge Cruces — Software Engineer">
+    <meta property="og:description" content="Full-stack engineer (Vue.js, .NET, TypeScript) in Santiago, Chile. Payments products at Ria, mobile games with 3,500+ installs, and WTX — an open plain-text workout format.">
+    <meta property="og:image" content="https://jcrucesdeveloper.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Jorge Cruces — Software Engineer. Vue.js, .NET, TypeScript. Santiago, Chile.">
+    <meta property="profile:first_name" content="Jorge">
+    <meta property="profile:last_name" content="Cruces">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jorge Cruces — Software Engineer">
+    <meta name="twitter:description" content="Full-stack engineer (Vue.js, .NET, TypeScript) in Santiago, Chile. Portfolio of web apps, mobile games and open-source tools.">
+    <meta name="twitter:image" content="https://jcrucesdeveloper.com/og-image.png">
 
-        <!-- Open Graph -->
-        <meta property="og:title" content="Jorge Cruces">
-        <meta property="og:description"
-            content="Portfolio and projects of Jorge Cruces, web developer.">
-        <meta property="og:image" content="preview-image.png">
-        <meta property="og:url" content="https://your-website.com">
-        <meta property="og:type" content="website">
+    <link rel="icon" href="./favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
 
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <link rel="icon" type="image/x-icon" href="./favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="./favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="./favicon-16x16.png">
-        <link rel="apple-touch-icon" sizes="180x180"
-            href="./apple-touch-icon.png">
-        <link rel="manifest" href="./site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="./css/main.css">
 
-    </head>
+    <!-- Apply the saved theme before first paint to avoid a flash. -->
+    <script>
+      try {
+        var theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
 
-    <body>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://jcrucesdeveloper.com/#website",
+            "url": "https://jcrucesdeveloper.com/",
+            "name": "Jorge Cruces",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://jcrucesdeveloper.com/#profile",
+            "url": "https://jcrucesdeveloper.com/",
+            "name": "Jorge Cruces — Software Engineer",
+            "dateModified": "2026-10-18",
+            "isPartOf": { "@id": "https://jcrucesdeveloper.com/#website" },
+            "mainEntity": { "@id": "https://jcrucesdeveloper.com/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://jcrucesdeveloper.com/#person",
+            "name": "Jorge Cruces",
+            "alternateName": "Jorge Andrés Cruces Ortiz",
+            "url": "https://jcrucesdeveloper.com/",
+            "image": "https://jcrucesdeveloper.com/android-chrome-512x512.png",
+            "email": "mailto:jcrucesdeveloper@gmail.com",
+            "jobTitle": "Software Engineer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Ria Money Transfer",
+              "url": "https://www.riamoneytransfer.com/"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Universidad de Chile",
+              "url": "https://uchile.cl/"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Santiago",
+              "addressCountry": "CL"
+            },
+            "knowsAbout": ["Software engineering", "Full-stack web development", "Vue.js", ".NET", "TypeScript", "Python", "AWS", "Progressive Web Apps", "Game development", "Programming languages"],
+            "knowsLanguage": ["es", "en", "pt", "ru"],
+            "sameAs": [
+              "https://github.com/jcrucesdeveloper",
+              "https://play.google.com/store/apps/developer?id=SirJaco"
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
 
-        <header>
-            <div class="header-content">
-                <h1>JC</h1>
-                <nav class="main-nav">
-                    <button class="hamburger" id="hamburger">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                    <ul class="nav-menu" id="nav-menu">
-                        <button class="close-menu" id="close-menu">
-                            <i class="fa-solid fa-times"></i>
-                        </button>
-                        <li><a href="#presentation">Presentation</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#technologies">Technologies</a></li>
-                        <li><a href="#academic">Academic</a></li>
-                        <li><a href="#aditional-info">Additional Info</a></li>
-                        <li><a href="https://github.com/jcrucesdeveloper">Github <i class="fab fa-github"></i></a> </li>
-                        <li><a href="./CV.pdf">CV<i class="fa-solid fa-file"></i></a> </li>
-                    </ul>
-                </nav>
-            </div>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Icon sprite (Lucide, ISC license) -->
+    <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3v18l14-9Z"/></symbol>
+      <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+      <symbol id="i-gamepad" viewBox="0 0 24 24"><path d="M6 11h4"/><path d="M8 9v4"/><path d="M15 12h.01"/><path d="M18 10h.01"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59l-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258l-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    </svg>
+
+    <header class="sidebar">
+      <a class="brand" href="#top" aria-label="Jorge Cruces, back to top">
+        <span class="brand__mark" aria-hidden="true">JC</span>
+        <span class="brand__text">
+          <span class="brand__name">Jorge Cruces</span>
+          <span class="brand__role">Software Engineer</span>
+        </span>
+      </a>
+
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg class="icon icon--open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ol class="nav__list">
+          <li><a class="nav__link" href="#about"><span class="nav__index">00</span>About</a></li>
+          <li><a class="nav__link" href="#work"><span class="nav__index">01</span>Work</a></li>
+          <li><a class="nav__link" href="#experience"><span class="nav__index">02</span>Experience</a></li>
+          <li><a class="nav__link" href="#skills"><span class="nav__index">03</span>Skills</a></li>
+          <li><a class="nav__link" href="#education"><span class="nav__index">04</span>Education</a></li>
+          <li><a class="nav__link" href="#contact"><span class="nav__index">05</span>Contact</a></li>
+        </ol>
+
+        <div class="nav__meta">
+          <ul class="socials">
+            <li>
+              <a class="icon-btn" href="https://github.com/jcrucesdeveloper" target="_blank" rel="noopener me" aria-label="GitHub profile">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-btn" href="mailto:jcrucesdeveloper@gmail.com" aria-label="Send me an email">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-btn" href="./CV.pdf" target="_blank" rel="noopener" aria-label="Curriculum vitae (PDF)">
+                <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>
+              </a>
+            </li>
+            <li>
+              <button class="icon-btn theme-toggle" type="button" aria-label="Switch to dark theme">
+                <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+                <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+              </button>
+            </li>
+          </ul>
+          <p class="nav__motto">JC stands for <em>Just Coding</em>.</p>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="content">
+      <!-- About -->
+      <section class="hero" id="about" aria-labelledby="hero-title">
+        <p class="hero__status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Software Engineer at Ria Money Transfer
+        </p>
+
+        <h1 class="hero__title" id="hero-title">
+          Hi, I'm Jorge Cruces.
+          <span class="hero__subtitle">I build software people rely on every day.</span>
+        </h1>
+
+        <p class="hero__lead">
+          I'm a full-stack engineer based in <strong>Santiago, Chile</strong>, working mostly with
+          <strong>Vue.js</strong>, <strong>.NET</strong> and <strong>TypeScript</strong>. Today I ship
+          international money transfer features at Ria; before that I built PWAs, serverless APIs and
+          enterprise apps for teams in the US and Chile.
+        </p>
+        <p class="hero__lead">
+          I studied Computer Engineering at the
+          <a href="https://uchile.cl/" target="_blank" rel="noopener">Universidad de Chile</a>, and I'm
+          happiest when I'm close to <strong>game engines</strong>, <strong>programming languages</strong>
+          and <strong>compilers</strong>. On the side I publish mobile games and tools &mdash; most recently
+          <a href="#wtx">WTX</a>, an open plain-text format for strength training.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">
+            See my work
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+          </a>
+          <a class="btn" href="./CV.pdf" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>
+            Résumé (PDF)
+          </a>
+          <a class="btn btn--ghost" href="https://github.com/jcrucesdeveloper" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            GitHub
+          </a>
+        </div>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt>Professional experience</dt>
+            <dd>4+ yrs</dd>
+          </div>
+          <div class="stat">
+            <dt>Daily transfers on a feature I shipped</dt>
+            <dd>4,000+</dd>
+          </div>
+          <div class="stat">
+            <dt>Monthly users on a PWA I built</dt>
+            <dd>5,000+</dd>
+          </div>
+          <div class="stat">
+            <dt>Installs across my mobile games</dt>
+            <dd>3,500+</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Work -->
+      <section class="section" id="work" aria-labelledby="work-title">
+        <header class="section__head">
+          <p class="section__index">01</p>
+          <h2 class="section__title" id="work-title">Selected work</h2>
+          <p class="section__intro">Products I designed, built and shipped on my own or with small teams.</p>
         </header>
 
-        <div id="content">
+        <article class="feature" id="wtx" aria-labelledby="wtx-title">
+          <div class="feature__body">
+            <div class="project__head">
+              <img class="project__icon" src="./imgs/projects/wtx.webp" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <div>
+                <h3 class="project__title" id="wtx-title">WTX</h3>
+                <p class="project__kind">Open file format &middot; Web &amp; mobile app</p>
+              </div>
+              <span class="badge">Active</span>
+            </div>
+            <p>
+              A dead-simple, plain-text format for strength training: <code>.wtt</code> files for routines
+              and <code>.wts</code> files for logged sessions, readable and writable by hand. The companion app
+              is mobile-first and local-first.
+            </p>
+            <ul class="feature__list">
+              <li>Build routines with a form that serializes back to valid <code>.wtt</code>.</li>
+              <li>Share a whole routine through a QR code or a self-contained link.</li>
+              <li>Log sessions with a rest timer, live PR detection and a training calendar.</li>
+              <li>Optional sync and live group workouts with friends.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>TypeScript</li><li>Vue 3</li><li>Pinia</li><li>Vite</li><li>Vitest</li><li>Supabase</li>
+            </ul>
+            <div class="project__links">
+              <a class="link" href="https://wtxworkout.com/" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>wtxworkout.com
+              </a>
+              <a class="link" href="https://github.com/jcrucesdeveloper/wtx" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Format spec
+              </a>
+              <a class="link" href="https://github.com/jcrucesdeveloper/wtx-app" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>App source
+              </a>
+            </div>
+          </div>
 
-            <main>
-                <!-- Presentation -->
-                <section id="presentation">
-                    <h2>Presentation</h2>
-                    <p>
-                        Hello, my name is <strong>Jorge Cruces</strong>.
-                        I hold a
-                        degree in
-                        <strong>Computer
-                            Science and Engineering</strong><i
-                            class="fa-solid fa-graduation-cap"></i>from the
-                        <a href="https://uchile.cl">University of Chile</a>, and
-                        I’m
-                        passionate about creating and exploring new
-                        technologies.
-                    </p>
-                    <p>
-                        My main areas of interest include <strong>Game
-                            engines</strong> <i
-                            class="fa-solid fa-gamepad"></i>,
-                        <strong>Programming languages</strong> <i
-                            class="fa-solid fa-code"></i>,
-                        <strong>Compilers</strong> <i
-                            class="fa-solid fa-cogs"></i>,
-                        and
-                        <strong>Web development</strong> <i
-                            class="fa-solid fa-globe"></i>.
-                    </p>
-                    <p>
-                        <em>JC stands for Just Coding!</em>
-                    </p>
-                </section>
+          <figure class="code-window">
+            <figcaption class="code-window__bar">
+              <span class="code-window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              push-day.wtt
+            </figcaption>
+            <pre><code><span class="tok-h"># Push Day</span>
+<span class="tok-k">unit:</span> kg
+<span class="tok-k">description:</span> Focuses mostly on chest.
 
-                <!-- Experience Summary -->
-                <section id="experience-summary">
-                    <div class="experience-cards">
-                        <div class="exp-card">
-                            <i class="fa-solid fa-code"></i>
-                            <h3>Full-Stack Developer</h3>
-                            <p>3+ years</p>
-                        </div>
-                        <div class="exp-card">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <h3>Game Developer</h3>
-                            <p>3+ published games</p>
-                        </div>
-                        <div class="exp-card">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                            <h3>Mobile Developer</h3>
-                            <p>Android & Unity</p>
-                        </div>
-                    </div>
-                </section>
+Warm up <span class="tok-p">|</span> <span class="tok-t">time</span> 1m30s
+Bench Press <span class="tok-p">|</span> <span class="tok-t">reps</span> 4x8 <span class="tok-p">|</span> <span class="tok-n">60</span> <span class="tok-p">|</span> <span class="tok-t">rest</span> 1m30s
+Incline Bench (Dumbbell) <span class="tok-p">|</span> <span class="tok-t">reps</span> 4x10 <span class="tok-p">|</span> <span class="tok-n">20</span>
+Lateral Raise <span class="tok-p">|</span> <span class="tok-t">reps</span> 3x12 <span class="tok-p">|</span> <span class="tok-t">rest</span> 1m30s
+Running <span class="tok-p">|</span> <span class="tok-t">time</span> 15m20s</code></pre>
+          </figure>
+        </article>
 
-                <!-- Experience -->
-                <section id="experience">
-                    <h2>Experience</h2>
-                    <!-- Andes -->
-                    <div class="job">
-                        <div class="job-info">
-                            <div class="job-image">
-                                <img src="./imgs/experience/andes_logo.jpg"
-                                    alt="Andes Logo">
-                            </div>
-                            <div class="job-details">
-                                <h3>Andes <a href="https://www.andes.bio"
-                                        target="_blank"><i
-                                            class="fa-solid fa-link"></i></a></h3>
-                                <p class="job-title">Front-end Software
-                                    Engineer</p>
-                                <p class="job-location">Alameda, California, USA
-                                    (Remote)</p>
-                                <p class="job-date">June 2024 – July 2025</p>
-                                <button class="expand-btn"
-                                    onclick="toggleJobDetails(this)">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                    What
-                                    did I accomplish at Andes?
-                                </button>
-                                <ul class="job-bullet-points"
-                                    style="display: none;">
-                                    <li>I maintained a PWA using <i
-                                            class="fab fa-vuejs"></i> Vue,
-                                        reaching
-                                        over
-                                        5,000
-                                        monthly active users, with integration
-                                        and
-                                        support
-                                        for both <i class="fab fa-android"></i>
-                                        Android and <i class="fab fa-apple"></i>
-                                        iOS
-                                        platforms.</li>
-                                    <li>Implemented CI/CD pipelines in Bitbucket
-                                        and
-                                        <i class="fab fa-aws"></i> AWS
-                                        CodePipeline, incorporating unit tests
-                                        and
-                                        E2E
-                                        tests with Cypress, ensuring at least
-                                        80%
-                                        coverage
-                                        in a high-complexity application.</li>
-                                    <li>Integrated artificial intelligence tools
-                                        to
-                                        automate
-                                        processes, including an agent for
-                                        automatic
-                                        pull
-                                        request review and changelog generation
-                                        without
-                                        manual intervention.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+        <div class="projects">
+          <article class="project">
+            <div class="project__head">
+              <img class="project__icon" src="./imgs/projects/gymbro.webp" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <div>
+                <h3 class="project__title">GymBro: Idle Clicker</h3>
+                <p class="project__kind">Mobile game &middot; Android &amp; iOS</p>
+              </div>
+            </div>
+            <p>
+              A casual idle game: train, buy new machines, expand your gym and keep progressing while you're
+              offline. Built in Unity and published on both stores.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>C#</li><li>Unity</li><li>iOS</li><li>Android</li></ul>
+            <div class="project__links">
+              <a class="link" href="https://play.google.com/store/apps/details?id=com.jorgecruces.gymbroidlesim" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Google Play
+              </a>
+              <a class="link" href="https://apps.apple.com/app/gymbro-idle-clicker-game/id6758640051" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg>App Store
+              </a>
+            </div>
+          </article>
 
-                    <!-- Niuro -->
-                    <div class="job">
-                        <div class="job-info">
-                            <div class="job-image">
-                                <img src="./imgs/experience/niuro_logo.jpg"
-                                    alt="Niuro Logo">
-                            </div>
-                            <div class="job-details">
-                                <h3>Niuro <a href="https://niuro.io/"
-                                        target="_blank"><i
-                                            class="fa-solid fa-link"></i></a></h3>
-                                <p class="job-title">FullStack Developer</p>
-                                <p class="job-location">Alameda, California,
-                                    United
-                                    States</p>
-                                <p class="job-date">June 2024 – Jule 2025</p>
-                                <button class="expand-btn"
-                                    onclick="toggleJobDetails(this)">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                    What
-                                    did I accomplish at Niuro?
-                                </button>
-                                <ul class="job-bullet-points"
-                                    style="display: none;">
-                                    <li>I developed a platform to manage sales
-                                        orders
-                                        for
-                                        LymphaPress, tracking patients,
-                                        clinicians,
-                                        payers,
-                                        referrals, and orders for medical
-                                        equipment
-                                        used
-                                        in
-                                        lymphedema treatment.</li>
-                                    <li>Deployed serverless functions in <i
-                                            class="fab fa-aws"></i> AWS Lambda
-                                        and
-                                        integrated services with other <i
-                                            class="fab fa-aws"></i> AWS
-                                        resources,
-                                        ensuring scalability, fault tolerance,
-                                        and
-                                        cost-effective infrastructure.</li>
-                                    <li>Implemented backend services using
-                                        FastAPI,
-                                        creating
-                                        RESTful endpoints to efficiently handle
-                                        business logic.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+          <article class="project">
+            <div class="project__head">
+              <img class="project__icon" src="./imgs/projects/metro-metro.webp" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <div>
+                <h3 class="project__title">Metro Metro</h3>
+                <p class="project__kind">Educational game &middot; Android</p>
+              </div>
+            </div>
+            <p>
+              Learn every station of the Santiago Metro by playing: guess stations line by line and test your
+              memory. <strong>1,000+ downloads</strong> on Google Play.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>Java</li><li>Android</li></ul>
+            <div class="project__links">
+              <a class="link" href="https://play.google.com/store/apps/details?id=com.jorgecruces.metrometro" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Google Play
+              </a>
+              <a class="link" href="https://github.com/jcrucesdeveloper/Metro-metro" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Source
+              </a>
+            </div>
+          </article>
 
-                    <div class="job">
-                        <div class="job-info">
-                            <div class="job-image">
-                                <img src="./imgs/experience/ibm.png"
-                                    alt="IBM Logo">
-                            </div>
-                            <div class="job-details">
-                                <h3>IBM <a href="https://www.ibm.com/"
-                                        target="_blank"><i
-                                            class="fa-solid fa-link"></i></a></h3>
-                                <p class="job-title">Blue Journey Student
-                                    Program</p>
-                                <p class="job-location">Santiago, Chile</p>
-                                <p class="job-date">July 2023 -January 2024</p>
-                                <button class="expand-btn"
-                                    onclick="toggleJobDetails(this)">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                    What
-                                    did I accomplish at IBM?
-                                </button>
-                                <ul class="job-bullet-points"
-                                    style="display: none;">
-                                    <li>Together with Vida Security, through the
-                                        IBM
-                                        Blue
-                                        Journey program, I improved two critical
-                                        applications—the private insurance
-                                        portal
-                                        and
-                                        the
-                                        SIC/TAD
-                                        system—ensuring operational continuity
-                                        during
-                                        the
-                                        transition to a new CORE database.</li>
-                                    <li>Deployed serverless functions in <i
-                                            class="fab fa-aws"></i> AWS Lambda
-                                        and
-                                        integrated services with other <i
-                                            class="fab fa-aws"></i> AWS
-                                        resources,
-                                        ensuring scalability, fault tolerance,
-                                        and
-                                        cost-effective infrastructure.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+          <article class="project">
+            <div class="project__head">
+              <img class="project__icon" src="./imgs/projects/euler-2.webp" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <div>
+                <h3 class="project__title">Euler 1 &amp; 2</h3>
+                <p class="project__kind">Puzzle games &middot; Android</p>
+              </div>
+            </div>
+            <p>
+              Mental-math and number puzzles that reward strategy: reach the target value in each stage.
+              <strong>1,000+ downloads each</strong> on Google Play.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>Java</li><li>Android</li></ul>
+            <div class="project__links">
+              <a class="link" href="https://play.google.com/store/apps/details?id=com.jorgecruces.euler2" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Euler 2
+              </a>
+              <a class="link" href="https://play.google.com/store/apps/details?id=com.jorgecruces.euler1" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Euler 1
+              </a>
+              <a class="link" href="https://github.com/jcrucesdeveloper/Euler-1" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Source
+              </a>
+            </div>
+          </article>
 
-                    <div class="job">
-                        <div class="job-info">
-                            <div class="job-image">
-                                <img src="./imgs/experience/kwiyx_logo.jpg"
-                                    alt="Kwiyx Logo">
-                            </div>
-                            <div class="job-details">
-                                <h3>Kwiyx <a
-                                        href="https://www.linkedin.com/company/kwiyx/about"
-                                        target="_blank"><i
-                                            class="fa-solid fa-link"></i></a></h3>
-                                <p class="job-title">Backend Developer -
-                                    (Internship
-                                    and Part-time)</p>
-                                <p class="job-location">Santiago, Chile</p>
-                                <p class="job-date">July 2023 -January 2024</p>
-                                <button class="expand-btn"
-                                    onclick="toggleJobDetails(this)">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                    What
-                                    did I accomplish at Kwiyx?
-                                </button>
-                                <ul class="job-bullet-points"
-                                    style="display: none;">
-                                    <li>Developed and optimized REST APIs using
-                                        TypeScript,
-                                        Express, and Django REST
-                                        Framework, ensuring scalable and
-                                        maintainable
-                                        backend services.</li>
-                                    <li>Deployed backend services on <i
-                                            class="fab fa-aws"></i> AWS using
-                                        Lambda
-                                        functions, S3 buckets, and API
-                                        Gateway, ensuring high availability,
-                                        serverless
-                                        infrastructure, and reduced
-                                        operational overhead.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+          <article class="project">
+            <div class="project__head">
+              <img class="project__icon" src="./imgs/projects/nerine.webp" alt="" width="56" height="56" loading="lazy" decoding="async">
+              <div>
+                <h3 class="project__title">Nerine</h3>
+                <p class="project__kind">3D adventure &middot; PC</p>
+              </div>
+            </div>
+            <p>
+              An experimental first-person graphic adventure mixing surreal exploration with garden mechanics,
+              made in Unity with the Floralia Team.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>C#</li><li>Unity</li><li>3D</li></ul>
+            <div class="project__links">
+              <a class="link" href="https://floraliateam.itch.io/nerine" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-gamepad"/></svg>Play on itch.io
+              </a>
+            </div>
+          </article>
 
-                    <div class="job">
-                        <div class="job-info">
-                            <div class="job-image">
-                                <img src="./imgs/experience/uchile_logo.png"
-                                    alt="Uchile Logo">
-                            </div>
-                            <div class="job-details">
-                                <h3>Universidad de Chile <a
-                                        href="https://uchile.cl/"
-                                        target="_blank"><i
-                                            class="fa-solid fa-link"></i></a>
-                                </h3>
-                                <p class="job-title">Teaching Assistant and
-                                    Assistant Instructor</p>
-                                <p class="job-location">Santigo, Chile</p>
-                                <p class="job-date">January 2024 - July 2025</p>
-                                <button class="expand-btn"
-                                    onclick="toggleJobDetails(this)">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                    What
-                                    did I accomplish at Universidad de Chile?
-                                </button>
-                                <ul class="job-bullet-points"
-                                    style="display: none;">
-                                    <li>Teaching Assistant – Design and
-                                        Programming
-                                        Methodologies CC3002.</li>
-                                    <li>Assistant Instructor – Game Engine
-                                        Architecture
-                                        CC5512.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+          <article class="project">
+            <div class="project__head">
+              <span class="project__icon project__icon--glyph" aria-hidden="true">
+                <svg class="icon"><use href="#i-code"/></svg>
+              </span>
+              <div>
+                <h3 class="project__title">TEOSC</h3>
+                <p class="project__kind">Static analysis &middot; Python</p>
+              </div>
+            </div>
+            <p>
+              Tensor Operation Static Counter: walks the Python AST of files, notebooks or whole repositories to
+              count PyTorch tensor operations without running the code. Grew out of my thesis research.
+            </p>
+            <ul class="tags" aria-label="Technologies"><li>Python</li><li>AST</li><li>PyTorch</li></ul>
+            <div class="project__links">
+              <a class="link" href="https://github.com/jcrucesdeveloper/TEOSC" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>Source
+              </a>
+            </div>
+          </article>
+        </div>
 
-                </section>
+        <p class="section__more">
+          <a class="link" href="https://github.com/jcrucesdeveloper?tab=repositories" target="_blank" rel="noopener">
+            More on GitHub<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </p>
+      </section>
 
-                <!-- Projects -->
+      <!-- Experience -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <header class="section__head">
+          <p class="section__index">02</p>
+          <h2 class="section__title" id="experience-title">Experience</h2>
+          <p class="section__intro">From backend internships to owning user-facing features in production.</p>
+        </header>
 
-                <section id="projects">
-                    <h2>Projects</h2>
-                    <!-- Nerine Game -->
-                    <div class="project">
-                        <div class="project-img">
-                            <img src="imgs/projects/nerine_icon.png"
-                                alt="Nerine Icon">
-                        </div>
-                        <div class="project-description">
-                            <h3>Nerine</h3>
-                            <p>Nerine is a 3D game developed in Unity using C#
-                                in
-                                collaboration with <a
-                                    href="https://floralia.team">Floralia
-                                    Team</a></p>
-                            <p>It is an experimental first-person graphic
-                                adventure
-                                that combines surreal exploration and garden
-                                mechanics.
-                            </p>
-                            <div class="project-buttons">
-                                <a href="https://floraliateam.itch.io/nerine"><i
-                                        class="fa-brands fa-itch-io"></i>Itch.io</a>
-                                <a class="is-soon"><i
-                                        class="fab fa-steam"></i>Coming Soon</a>
-                            </div>
-                        </div>
-                    </div>
+        <ol class="timeline">
+          <li class="role role--current">
+            <p class="role__date"><time datetime="2025-12">Dec 2025</time> &ndash; Present</p>
+            <div class="role__body">
+              <h3 class="role__title">Software Engineer, Full Stack <span class="role__org">&middot; Ria Money Transfer</span></h3>
+              <p class="role__place">Santiago &middot; Hybrid</p>
+              <ul class="role__points">
+                <li>Shipped <strong>Track a Transfer</strong>, handling 4,000+ orders a day (357k+ since launch) across international money transfers.</li>
+                <li>Integrated Google Pay via Adyen into the WhatsApp flow, lifting conversion for native-wallet users.</li>
+                <li>Launched the WhatsApp flow in the UK and Spain, driving early adoption in both markets.</li>
+                <li>Implemented compliance document upload on the digital platform for brick-and-mortar customers.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies"><li>Vue.js</li><li>.NET</li><li>Adyen</li><li>WhatsApp</li></ul>
+            </div>
+          </li>
 
-                    <!-- Metro Metro -->
-                    <div class="project">
-                        <div class="project-img">
-                            <img src="imgs/projects/metro_metro_icon.png"
-                                alt="Metro Metro Icon">
-                        </div>
-                        <div class="project-description">
-                            <h3>Metro: Metro Santiago de Chile</h3>
-                            <p>Metro Metro is an Android game with over
-                                <strong>1,000 downloads</strong> on the Play
-                                Store.</p>
-                            <p>It's designed to help users learn and memorize
-                                the
-                                Metro in an interactive way by playing through
-                                stations and testing their memory.</p>
-                            <div class="project-buttons">
-                                <a
-                                    href="https://play.google.com/store/apps/details?id=com.jorgecruces.metrometro"><i
-                                        class="fab fa-google-play"></i>Play
-                                    Store</a>
-                            </div>
-                        </div>
-                    </div>
+          <li class="role">
+            <p class="role__date"><time datetime="2024-06">Jun 2024</time> &ndash; <time datetime="2025-07">Jul 2025</time></p>
+            <div class="role__body">
+              <h3 class="role__title">Frontend Developer <span class="role__org">&middot; <a href="https://www.andes.bio/" target="_blank" rel="noopener">Andes</a></span></h3>
+              <p class="role__place">Remote &middot; California, USA</p>
+              <ul class="role__points">
+                <li>Built and maintained a Vue.js PWA used by 5,000+ people a month for geolocation and seed-planting field workflows.</li>
+                <li>Designed UX helpers for non-technical field samplers who were new to digital tools.</li>
+                <li>Set up CI/CD on Bitbucket and AWS CodePipeline with Cypress E2E tests, reaching 80%+ coverage.</li>
+                <li>Automated PR review and changelog generation with an AI agent, removing manual work from releases.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies"><li>Vue.js</li><li>PWA</li><li>Cypress</li><li>AWS</li></ul>
+            </div>
+          </li>
 
-                    <!-- Euler 2-->
-                    <div class="project">
-                        <div class="project-title">
-                            <img src="imgs/projects/euler_2_icon.png"
-                                alt="Euler 2 Icon">
-                        </div>
-                        <div class="project-description">
-                            <h3>Euler 2</h3>
-                            <p>Euler 2 is a puzzle game for Android with over
-                                <strong>1,000 downloads</strong> on the Play
-                                Store
-                                that challenges players with numerical and
-                                logical
-                                thinking.</p>
-                            <p>The game encourages strategic thinking,
-                                creativity,
-                                and mastery of numbers as you try to reach the
-                                target values in each stage.</p>
-                            <div class="project-buttons">
-                                <a
-                                    href="https://play.google.com/store/apps/details?id=com.jorgecruces.euler2"><i
-                                        class="fab fa-google-play"></i>Play
-                                    Store</a>
-                            </div>
-                        </div>
-                    </div>
+          <li class="role">
+            <p class="role__date"><time datetime="2024-01">Jan 2024</time> &ndash; <time datetime="2024-06">Jun 2024</time></p>
+            <div class="role__body">
+              <h3 class="role__title">Full Stack Developer <span class="role__org">&middot; <a href="https://niuro.io/" target="_blank" rel="noopener">Niuro</a></span></h3>
+              <p class="role__place">Remote &middot; Santiago</p>
+              <ul class="role__points">
+                <li>Led sprint planning and delivery in a small team building LymphaPress, a medical order management platform.</li>
+                <li>Deployed FastAPI services on AWS Lambda; the serverless setup cut infrastructure costs while staying fault tolerant.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies"><li>Svelte</li><li>FastAPI</li><li>AWS Lambda</li></ul>
+            </div>
+          </li>
 
-                    <!-- Gym Bro: Idle game-->
-                    <div class="project">
-                        <div class="project-title">
-                            <img src="imgs//projects/gymbro_icon.jpg"
-                                alt="Gym Bro Icon">
-                        </div>
-                        <div class="project-description">
-                            <h3>Gym Bro: Idle Game</h3>
-                            <p><strong>GymBro: Idle Clicker</strong> is a casual
-                                Android game where you train, upgrade your gym,
-                                and
-                                become the ultimate bro.</p>
-                            <p>Tap to get stronger, unlock new machines, expand
-                                your
-                                gym, and keep growing even while you're
-                                offline.</p>
-                            <div class="project-buttons">
-                                <a
-                                    href="https://play.google.com/store/apps/details?id=com.jorgecruces.gymbroidlesim"><i
-                                        class="fab fa-google-play"></i>Play
-                                    Store</a>
-                                <a class="is-soon"><i
-                                        class="fab fa-app-store-ios"></i>Coming
-                                    Soon</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- TEOSC -->
-                    <div class="project">
-                        <div class="project-description">
-                            <h3>TEOSC: Tensor Operation Static Counter</h3>
-                            <p>
-                                <strong>TEOSC</strong> (Tensor Operation Static
-                                Counter) is a Python tool designed to analyze
-                                and
-                                count <strong>PyTorch tensor operations</strong>
-                                in
-                                Python files, Jupyter notebooks, or entire
-                                repositories.
-                            </p>
-                            <p>
-                                It leverages Python's <code>ast</code> (Abstract
-                                Syntax Tree) module to statically parse code,
-                                detect
-                                tensor-related operations without executing the
-                                code, and provide insights into model complexity
-                                and
-                                performance at the code level.
-                            </p>
-                            <div class="project-buttons">
-                                <a
-                                    href="https://github.com/jcrucesdeveloper/TEOSC"><i
-                                        class="fab fa-github"></i>Github</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+          <li class="role">
+            <p class="role__date"><time datetime="2023-07">Jul 2023</time> &ndash; <time datetime="2024-01">Jan 2024</time></p>
+            <div class="role__body">
+              <h3 class="role__title">Software Engineer Intern <span class="role__org">&middot; IBM</span></h3>
+              <p class="role__place">Santiago &middot; Hybrid</p>
+              <ul class="role__points">
+                <li>Modernized two critical insurance applications during a core database migration (IBM Blue Journey) with zero downtime.</li>
+                <li>Built BFF microservices in .NET Core with Angular frontends, and configured CI/CD in Azure DevOps.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies"><li>.NET Core</li><li>Angular</li><li>Azure DevOps</li></ul>
+            </div>
+          </li>
 
-                <!-- Technologies -->
-                <section id="technologies">
-                    <h2>Technologies</h2>
-                    <div class="tech-category">
-                        <h3>Languages Frameworks</h3>
-                        <ul>
-                            <li><i class="fab fa-js-square"></i> TypeScript</li>
-                            <li><i class="fas fa-hashtag"></i> C#</li>
-                            <li><i class="fab fa-python"></i> Python</li>
-                            <li><i class="fab fa-php"></i> PHP</li>
-                        </ul>
-                    </div>
-                    <div class="tech-category">
-                        <h3>Frameworks</h3>
-                        <ul>
-                            <li><i class="fas fa-rocket"></i> FastAPI</li>
-                            <li><i class="fab fa-python"></i> Django</li>
-                            <li><i class="fab fa-node-js"></i> Express</li>
-                            <li><i class="fab fa-vuejs"></i> Vue3</li>
-                        </ul>
-                    </div>
-                    <div class="tech-category">
-                        <h3>Tools</h3>
-                        <ul>
-                            <li><i class="fab fa-aws"></i> AWS</li>
-                            <li><i class="fab fa-docker"></i> Docker</li>
-                            <li><i class="fab fa-git-alt"></i> Git</li>
-                            <li><i class="fab fa-jira"></i> JIRA</li>
-                        </ul>
-                    </div>
-                    <div class="tech-category">
-                        <h3>Databases and Testing</h3>
-                        <ul>
-                            <li><i class="fas fa-database"></i> PostgreSQL</li>
-                            <li><i class="fas fa-database"></i> MySQL</li>
-                            <li><i class="fas fa-vial"></i> PyTest</li>
-                            <li><i class="fab fa-js-square"></i> Jest</li>
-                        </ul>
-                    </div>
-                </section>
+          <li class="role">
+            <p class="role__date"><time datetime="2024-01">Jan 2024</time> &ndash; <time datetime="2025-07">Jul 2025</time></p>
+            <div class="role__body">
+              <h3 class="role__title">Teaching Assistant <span class="role__org">&middot; Universidad de Chile</span></h3>
+              <p class="role__place">Santiago</p>
+              <ul class="role__points">
+                <li>Assistant instructor for <em>Game Engine Architecture</em> (CC5512).</li>
+                <li>Teaching assistant for <em>Design and Programming Methodologies</em> (CC3002).</li>
+              </ul>
+            </div>
+          </li>
 
-                <section id="academic">
-                    <h2>Academic Information</h2>
-                    <div class="academic-img">
-                        <img src="imgs/academic/fcfm.png" alt="fcfm">
-                    </div>
-                    <div class="academic">
-                        <h3>Universidad de Chile</h3>
-                        <p>Computer Engineering and Computer Science</p>
-                        <p>Honors: Outstanding Student 2023</p>
-                        <p>2020 - 2025</p>
-                    </div>
-                </section>
+          <li class="role">
+            <p class="role__date"><time datetime="2021-04">Apr 2021</time> &ndash; <time datetime="2022-07">Jul 2022</time></p>
+            <div class="role__body">
+              <h3 class="role__title">Backend Programmer Intern <span class="role__org">&middot; Kwiyx</span></h3>
+              <p class="role__place">Santiago &middot; Hybrid</p>
+              <ul class="role__points">
+                <li>Built REST APIs for a construction marketplace and deployed them serverless on AWS Lambda and S3.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies"><li>TypeScript</li><li>Express</li><li>Django</li></ul>
+            </div>
+          </li>
+        </ol>
 
-                <section id="aditional-info">
-                    <h2>Additional Information</h2>
-                    <ul>
-                        <li>Languages: Spanish (native), English (C2),
-                            Portuguese
-                            (basic), Russian (basic)</li>
-                        <li>EducationUSA Academy Scholar (U.S. Embassy)</li>
-                        <li>Selected for the First Platanus Build Night 🍌</li>
-                        <li>First place — DefHack Nido de las Águilas Hackathon
-                            (2019)</li>
-                    </ul>
-                </section>
+        <p class="section__more">
+          <a class="link" href="./CV.pdf" target="_blank" rel="noopener">
+            Full résumé (PDF)<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </p>
+      </section>
 
-            </main>
+      <!-- Skills -->
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <header class="section__head">
+          <p class="section__index">03</p>
+          <h2 class="section__title" id="skills-title">Skills</h2>
+          <p class="section__intro">The tools I reach for, and the ones I've shipped with in production.</p>
+        </header>
 
-            <footer>
-                <div class="footer-content">
-                    <p>&copy; 2025 Jorge Cruces. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="https://github.com/jcrucesdeveloper"
-                            target="_blank">
-                            <i class="fa-brands fa-github"></i> GitHub
-                        </a>
-                        <a href="mailto:jorge.cruces@example.com">
-                            <i class="fa-solid fa-envelope"></i> Contact
-                        </a>
-                    </div>
-                </div>
-            </footer>
+        <dl class="skills">
+          <div class="skills__group">
+            <dt>Languages</dt>
+            <dd><ul class="tags"><li>TypeScript</li><li>JavaScript</li><li>C#</li><li>Python</li><li>Java</li><li>SQL</li></ul></dd>
+          </div>
+          <div class="skills__group">
+            <dt>Frontend</dt>
+            <dd><ul class="tags"><li>Vue.js</li><li>Pinia</li><li>Svelte</li><li>Angular</li><li>PWA</li><li>HTML &amp; CSS</li></ul></dd>
+          </div>
+          <div class="skills__group">
+            <dt>Backend</dt>
+            <dd><ul class="tags"><li>.NET</li><li>FastAPI</li><li>Node.js</li><li>Express</li><li>Django REST</li></ul></dd>
+          </div>
+          <div class="skills__group">
+            <dt>Cloud &amp; DevOps</dt>
+            <dd><ul class="tags"><li>AWS Lambda</li><li>S3</li><li>CodePipeline</li><li>Azure DevOps</li><li>Docker</li><li>CI/CD</li><li>Git</li></ul></dd>
+          </div>
+          <div class="skills__group">
+            <dt>Data &amp; testing</dt>
+            <dd><ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>Supabase</li><li>Cypress</li><li>Vitest</li><li>Jest</li><li>PyTest</li></ul></dd>
+          </div>
+          <div class="skills__group">
+            <dt>Games &amp; mobile</dt>
+            <dd><ul class="tags"><li>Unity</li><li>Android</li><li>iOS publishing</li></ul></dd>
+          </div>
+        </dl>
+      </section>
 
-            <script src="js/main.js"></script>
-        </body>
-    </div>
+      <!-- Education -->
+      <section class="section" id="education" aria-labelledby="education-title">
+        <header class="section__head">
+          <p class="section__index">04</p>
+          <h2 class="section__title" id="education-title">Education &amp; recognition</h2>
+        </header>
 
+        <div class="edu">
+          <article class="edu__card">
+            <p class="role__date"><time datetime="2020">2020</time> &ndash; <time datetime="2025">2025</time></p>
+            <h3 class="edu__title">B.Sc. Computer Engineering</h3>
+            <p class="edu__school">
+              <a href="https://uchile.cl/" target="_blank" rel="noopener">Universidad de Chile</a> &middot; Faculty of Physical and Mathematical Sciences (FCFM)
+            </p>
+            <p class="edu__thesis">
+              <span class="edu__label">Thesis</span>
+              <em lang="es">Formalización enfocada a operaciones de tensores PyTorch</em>
+              (formalizing PyTorch tensor operations), advised by Matías Toro and Éric Tanter.
+            </p>
+            <div class="project__links">
+              <a class="link" href="./cf-cruces_jo.pdf" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Thesis (PDF, Spanish)
+              </a>
+              <a class="link" href="./memoria.pdf" target="_blank" rel="noopener">
+                <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Defense slides
+              </a>
+            </div>
+          </article>
+
+          <ul class="awards">
+            <li class="award">
+              <span class="award__year">2025</span>
+              <span><strong>Platanus Build Night</strong> &mdash; top 20 of 100+ developers</span>
+            </li>
+            <li class="award">
+              <span class="award__year">2025</span>
+              <span><strong>EF SET C2 Proficient</strong> &mdash; English, 78/100</span>
+            </li>
+            <li class="award">
+              <span class="award__year">2023</span>
+              <span><strong>Outstanding Student</strong> &mdash; Universidad de Chile</span>
+            </li>
+            <li class="award">
+              <span class="award__year">2019</span>
+              <span><strong>1st place, DefHacks Santiago</strong> hackathon</span>
+            </li>
+            <li class="award">
+              <span class="award__year">&mdash;</span>
+              <span><strong>EducationUSA Academy Scholar</strong> &mdash; U.S. Embassy</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="languages">
+          <span class="edu__label">Languages</span>
+          Spanish (native) &middot; English (C2) &middot; Portuguese (basic) &middot; Russian (basic)
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <header class="section__head">
+          <p class="section__index">05</p>
+          <h2 class="section__title" id="contact-title">Let's talk</h2>
+        </header>
+        <p class="contact__text">
+          Have a project, a role or an idea you want to bounce around? My inbox is always open.
+        </p>
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" href="mailto:jcrucesdeveloper@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            jcrucesdeveloper@gmail.com
+          </a>
+          <button class="btn btn--lg copy-email" type="button" data-email="jcrucesdeveloper@gmail.com">
+            <svg class="icon icon--copy" aria-hidden="true"><use href="#i-copy"/></svg>
+            <svg class="icon icon--check" aria-hidden="true"><use href="#i-check"/></svg>
+            <span class="copy-email__label">Copy email</span>
+          </button>
+        </div>
+        <p class="contact__location">
+          <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+          Santiago, Chile &middot; UTC&minus;3
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; <span data-year>2026</span> Jorge Cruces. Hand-written HTML, CSS and a little JavaScript.</p>
+        <p class="footer__links">
+          App privacy policies:
+          <a href="./gymbro_policy.html">GymBro</a> &middot;
+          <a href="./metro_metro_policy.html">Metro Metro</a> &middot;
+          <a href="./euler1_policy.html">Euler 1</a> &middot;
+          <a href="./euler2_policy.html">Euler 2</a>
+        </p>
+      </footer>
+    </main>
+
+    <script src="./js/main.js" defer></script>
+  </body>
 </html>

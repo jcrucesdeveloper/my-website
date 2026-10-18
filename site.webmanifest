@@ -1,6 +1,9 @@
 {
-  "name": "Jorge Cruces",
-  "short_name": "JC",
+  "name": "Jorge Cruces — Software Engineer",
+  "short_name": "Jorge Cruces",
+  "description": "Portfolio of Jorge Cruces, full-stack software engineer in Santiago, Chile.",
+  "start_url": "./",
+  "scope": "./",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",
