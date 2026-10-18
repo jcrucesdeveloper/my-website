@@ -6,8 +6,9 @@ no build step. Deployed to GitHub Pages from `master` (see `.github/workflows/st
 ```
 index.html          single-page portfolio (SEO meta + JSON-LD in <head>)
 css/main.css        design tokens, light/dark themes, layout
-js/main.js          mobile menu, theme toggle, active-section nav, copy email
+js/main.js          theme toggle, active-section nav, copy email
 imgs/projects/      project icons (WebP, 192px)
+imgs/logos/         company and organization logos (WebP, 96px)
 og-image.png        1200×630 social preview
 CV.pdf              résumé, built from the `cv` repo
 *_policy.html, ios/ app privacy policies and support pages (linked from the stores)
