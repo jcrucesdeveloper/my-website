@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="/css/main.css">
     <script>
       try {
@@ -28,25 +28,24 @@
         padding: 2rem 1rem;
         text-align: center;
       }
-      .not-found .brand__mark {
+      .not-found .mark {
         margin: 0 auto 0.5rem;
       }
       .not-found p {
         color: var(--text-muted);
       }
-      .not-found .btn {
-        justify-self: center;
-        margin-top: 0.5rem;
+      .not-found .intro__name {
+        font-size: 1.75rem;
       }
     </style>
   </head>
   <body>
     <main class="not-found">
-      <span class="brand__mark" aria-hidden="true">JC</span>
-      <p class="section__index">404</p>
-      <h1 class="section__title">This page doesn't exist.</h1>
+      <a class="mark" href="/" aria-label="Home">JC</a>
+      <p class="item__date">404</p>
+      <h1 class="intro__name">This page doesn't exist.</h1>
       <p>Maybe it moved, or the link has a typo.</p>
-      <a class="btn btn--primary" href="/">Back to the homepage</a>
+      <a href="/">Back to the homepage &rarr;</a>
     </main>
   </body>
 </html>

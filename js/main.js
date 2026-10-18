@@ -2,38 +2,6 @@
   "use strict";
 
   var root = document.documentElement;
-  var desktop = window.matchMedia("(min-width: 1100px)");
-
-  /* ---------- Mobile navigation ---------- */
-
-  var navToggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("site-nav");
-
-  function setNavOpen(open) {
-    nav.classList.toggle("is-open", open);
-    document.body.classList.toggle("nav-open", open);
-    navToggle.setAttribute("aria-expanded", String(open));
-    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  }
-
-  navToggle.addEventListener("click", function () {
-    setNavOpen(!nav.classList.contains("is-open"));
-  });
-
-  nav.addEventListener("click", function (event) {
-    if (event.target.closest("a")) setNavOpen(false);
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape" && nav.classList.contains("is-open")) {
-      setNavOpen(false);
-      navToggle.focus();
-    }
-  });
-
-  desktop.addEventListener("change", function () {
-    setNavOpen(false);
-  });
 
   /* ---------- Theme ---------- */
 
@@ -63,7 +31,7 @@
   prefersDark.addEventListener("change", syncThemeToggle);
   syncThemeToggle();
 
-  /* ---------- Highlight the section in view ---------- */
+  /* ---------- Highlight the section in view (desktop nav) ---------- */
 
   var links = Array.prototype.slice.call(document.querySelectorAll(".nav__link"));
   var sections = links
@@ -71,7 +39,6 @@
       return document.querySelector(link.getAttribute("href"));
     })
     .filter(Boolean);
-
   var ticking = false;
 
   // The current section is the last one whose top has passed 40% of the
@@ -79,7 +46,7 @@
   function updateCurrentSection() {
     ticking = false;
     var threshold = window.innerHeight * 0.4;
-    var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    var atBottom = window.innerHeight + window.scrollY >= root.scrollHeight - 2;
     var current = sections[0];
 
     sections.forEach(function (section) {
@@ -114,7 +81,6 @@
   var copyButton = document.querySelector(".copy-email");
 
   if (copyButton) {
-    var label = copyButton.querySelector(".copy-email__label");
     var resetTimer;
 
     copyButton.addEventListener("click", function () {
@@ -125,12 +91,10 @@
 
       copy
         .then(function () {
-          copyButton.classList.add("is-copied");
-          label.textContent = "Copied!";
+          copyButton.textContent = "Copied";
           clearTimeout(resetTimer);
           resetTimer = setTimeout(function () {
-            copyButton.classList.remove("is-copied");
-            label.textContent = "Copy email";
+            copyButton.textContent = "Copy";
           }, 2000);
         })
         .catch(function () {
